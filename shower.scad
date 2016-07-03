@@ -11,6 +11,9 @@ module 240_balka(){
 rotate([90, 0, 0]) cube([10, 10, 240]);
 }
 
+module fundam(){
+translate([5, -5, -80]) cylinder(r= 17.5, h= 80);}
+
 //125_balka();
 //200_balka();
 //240_balka();
@@ -37,4 +40,11 @@ for (i = [
 [0, -230, 210]]){ translate(i) 125_balka();}
 
 
+for (i = [
+[0, 0, 0], 
+[115, 0, 0],
+[0, -115, 0], 
+[115, -115, 0],
+[0, -230, 0],
+[115, -230, 0]]){ translate(i) fundam();}
  echo("Version:",version());
